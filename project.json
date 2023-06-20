@@ -1,11 +1,12 @@
 {
   "name": "CM_Demo",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "CM_Tutorial_FetchStream.xaml",
   "dependencies": {
     "InternalLabs.CommunicationsMining.Activities": "1.0.3",
     "UiPath.Excel.Activities": "[2.16.2]",
     "UiPath.Mail.Activities": "[1.18.2]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.2.3]",
     "UiPath.System.Activities": "[22.10.5]",
     "UiPath.Testing.Activities": "[22.10.3]",
     "UiPath.UIAutomation.Activities": "[22.10.5]"
@@ -51,6 +52,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "fedccd4c-b2a1-429e-b75a-90c8d1ecdbb6",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CM_Tutorial_FetchStream.xaml",
+      "uniqueId": "1ebca472-716d-411a-b3b1-479e117fe4f1",
       "input": [],
       "output": []
     }
