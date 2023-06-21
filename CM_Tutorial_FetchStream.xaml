@@ -91,7 +91,7 @@
         <InArgument x:TypeArguments="x:String">24ATM5IMEP4FGG7VTQCUIU6M4OQJA3Q5LU2LT3GBUK3VEAXL</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="989.333333333333,300.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which dataset do you want to connect? Hotel Review or Insurance" OptionsString="Hotel Review;Insurance" Title="Select Dataset">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="989.333333333333,300.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which dataset do you want to connect? Hotel Review or Insurance" OptionsString="Hotel Review;Insurance" Title="Fetch Stream - Select Dataset">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[InputDataset]</OutArgument>
       </ui:InputDialog.Result>

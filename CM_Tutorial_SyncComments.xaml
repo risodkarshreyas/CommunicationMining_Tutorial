@@ -76,7 +76,6 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CM_Tutorial" sap:VirtualizedContainerService.HintSize="1094.66666666667,3153.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -142,7 +141,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1032.66666666667,300.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which dataset do you want to connect? Hotel Review or Insurance" OptionsString="Hotel Review;Insurance" Title="Select Dataset">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1032.66666666667,300.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which dataset do you want to connect? Hotel Review or Insurance" OptionsString="Hotel Review;Insurance" Title="Upload comments - Select Dataset">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[InputDS]</OutArgument>
       </ui:InputDialog.Result>
@@ -196,7 +195,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1032.66666666667,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="data" WorkbookPath="InputData\Sample_backup.xlsx" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1032.66666666667,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="data" WorkbookPath="InputData\Sample.xlsx" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1032.66666666667,1268" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -233,7 +232,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <c:SyncComments ApiToken="[new system.net.NetworkCredential(&quot;&quot;,APIKey).SecurePassword]" BaseUrl="[new URi(BaseURL)]" BatchSize="2" Comments="[CommentList]" DisplayName="Sync Comments" sap:VirtualizedContainerService.HintSize="1032.66666666667,355.333333333333" sap2010:WorkflowViewState.IdRef="SyncComments_1" ProjectName="[ProjectName]" Responses="[SyncCommentsRespObj]" SourceName="[SourceName]" />
+    <c:SyncComments ApiToken="[new system.net.NetworkCredential(&quot;&quot;,APIKey).SecurePassword]" BaseUrl="[new URi(BaseURL)]" BatchSize="20" Comments="[CommentList]" DisplayName="Sync Comments" sap:VirtualizedContainerService.HintSize="1032.66666666667,355.333333333333" sap2010:WorkflowViewState.IdRef="SyncComments_1" ProjectName="[ProjectName]" Responses="[SyncCommentsRespObj]" SourceName="[SourceName]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1032.66666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sync comments completed&quot;]" />
   </Sequence>
 </Activity>
